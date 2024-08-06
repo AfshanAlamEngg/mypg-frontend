@@ -1,4 +1,3 @@
-// src/pages/Dashboard.js
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import {
@@ -19,6 +18,7 @@ import {
     DialogTitle,
     TextField,
     Box,
+    TablePagination
 } from '@mui/material';
 
 const Dashboard = () => {
@@ -27,6 +27,8 @@ const Dashboard = () => {
     const [confirmOpen, setConfirmOpen] = useState(false);
     const [currentUser, setCurrentUser] = useState(null);
     const [isUpdate, setIsUpdate] = useState(false);
+    const [page, setPage] = useState(0);
+    const [rowsPerPage, setRowsPerPage] = useState(5);
 
     useEffect(() => {
         fetchData();
@@ -84,6 +86,17 @@ const Dashboard = () => {
         setCurrentUser(null);
     };
 
+    const handleChangePage = (event, newPage) => {
+        setPage(newPage);
+    };
+
+    const handleChangeRowsPerPage = (event) => {
+        setRowsPerPage(parseInt(event.target.value, 10));
+        setPage(0);
+    };
+
+    const paginatedData = data.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage);
+
     return (
         <Container>
             <Typography variant="h4" gutterBottom>
@@ -110,7 +123,7 @@ const Dashboard = () => {
                         </TableRow>
                     </TableHead>
                     <TableBody>
-                        {data.map(user => (
+                        {paginatedData.map(user => (
                             <TableRow key={user.id}>
                                 <TableCell>{user.id}</TableCell>
                                 <TableCell>{user.name}</TableCell>
@@ -138,6 +151,16 @@ const Dashboard = () => {
                     </TableBody>
                 </Table>
             </TableContainer>
+
+            <TablePagination
+                rowsPerPageOptions={[5, 10, 25]}
+                component="div"
+                count={data.length}
+                rowsPerPage={rowsPerPage}
+                page={page}
+                onPageChange={handleChangePage}
+                onRowsPerPageChange={handleChangeRowsPerPage}
+            />
 
             <Dialog open={open} onClose={handleDialogClose}>
                 <DialogTitle>{isUpdate ? 'Update User' : 'Add User'}</DialogTitle>
