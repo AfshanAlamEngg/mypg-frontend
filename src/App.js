@@ -3,7 +3,8 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { CssBaseline, Box, Toolbar } from '@mui/material';
 import Navbar from './components/Navbar';
 import Sidebar from './components/Sidebar';
-import Dashboard from './pages/Dashboard';
+// import Dashboard from './pages/Dashboard';
+import Dashboard from './pages/Dashboard/Dashboard';
 import Profile from './pages/Profile';
 import Landlord from './pages/Landlord'; // Import the new Landlord page
 
