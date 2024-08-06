@@ -54,10 +54,24 @@ const Navbar = () => {
                             <AccountCircleIcon />
                         </Avatar>
                     </IconButton>
+                    {/* User Menu */}
                     <Menu
                         anchorEl={anchorEl}
                         open={Boolean(anchorEl)}
                         onClose={handleMenuClose}
+                        PaperProps={{
+                            sx: {
+                                borderRadius: '8px', // Rounded corners
+                                backgroundColor: '#424242', // Dark background for menu
+                                color: '#fff', // White text color
+                                '& .MuiMenuItem-root': {
+                                    padding: '12px 16px', // Padding for menu items
+                                    '&:hover': {
+                                        backgroundColor: '#616161', // Hover effect
+                                    }
+                                }
+                            }
+                        }}
                     >
                         <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
                         <MenuItem onClick={handleMenuClose}>Settings</MenuItem>
@@ -68,6 +82,19 @@ const Navbar = () => {
                         anchorEl={notificationAnchorEl}
                         open={Boolean(notificationAnchorEl)}
                         onClose={handleNotificationClose}
+                        PaperProps={{
+                            sx: {
+                                borderRadius: '8px', // Rounded corners
+                                backgroundColor: '#424242', // Dark background for menu
+                                color: '#fff', // White text color
+                                '& .MuiMenuItem-root': {
+                                    padding: '12px 16px', // Padding for menu items
+                                    '&:hover': {
+                                        backgroundColor: '#616161', // Hover effect
+                                    }
+                                }
+                            }
+                        }}
                     >
                         <MenuItem onClick={handleNotificationClose}>Notification 1</MenuItem>
                         <MenuItem onClick={handleNotificationClose}>Notification 2</MenuItem>
