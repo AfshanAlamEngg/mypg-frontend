@@ -89,14 +89,15 @@ const Dashboard = () => {
             <Typography variant="h4" gutterBottom>
                 User Data
             </Typography>
-            <Button
-                variant="contained"
-                color="success"
-                onClick={handleAdd}
-                sx={{ marginBottom: 2 }}
-            >
-                Add User
-            </Button>
+            <Box sx={{ display: 'flex', justifyContent: 'flex-end', marginBottom: 2 }}>
+                <Button
+                    variant="contained"
+                    color="success"
+                    onClick={handleAdd}
+                >
+                    Add User
+                </Button>
+            </Box>
             <TableContainer component={Paper}>
                 <Table>
                     <TableHead>
