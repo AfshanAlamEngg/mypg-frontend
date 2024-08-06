@@ -5,6 +5,7 @@ import Navbar from './components/Navbar';
 import Sidebar from './components/Sidebar';
 import Dashboard from './pages/Dashboard';
 import Profile from './pages/Profile';
+import Landlord from './pages/Landlord'; // Import the new Landlord page
 
 const drawerWidth = 240;
 
@@ -30,6 +31,7 @@ const App = () => {
                     <Routes>
                         <Route path="/dashboard" element={<Dashboard />} />
                         <Route path="/profile" element={<Profile />} />
+                        <Route path="/landlord" element={<Landlord />} /> {/* Add new route */}
                     </Routes>
                 </Box>
             </Box>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Drawer, List, ListItem, ListItemIcon, ListItemText, Toolbar, IconButton, Divider, Box } from '@mui/material';
-import { Home as HomeIcon, Person as PersonIcon, Menu as MenuIcon, ChevronLeft as ChevronLeftIcon, ChevronRight as ChevronRightIcon } from '@mui/icons-material';
+import { Home as HomeIcon, Person as PersonIcon, Menu as MenuIcon, ChevronLeft as ChevronLeftIcon, ChevronRight as ChevronRightIcon, Business as BusinessIcon } from '@mui/icons-material';
 import { Link } from 'react-router-dom';
 
 const drawerWidth = 240;
@@ -28,6 +28,10 @@ const Sidebar = ({ open, setOpen }) => {
                 <ListItem button component={Link} to="/profile">
                     <ListItemIcon><PersonIcon style={{ color: 'white' }} /></ListItemIcon>
                     <ListItemText primary="Profile" />
+                </ListItem>
+                <ListItem button component={Link} to="/landlord">
+                    <ListItemIcon><BusinessIcon style={{ color: 'white' }} /></ListItemIcon>
+                    <ListItemText primary="Landlord" />
                 </ListItem>
             </List>
             <Divider />
