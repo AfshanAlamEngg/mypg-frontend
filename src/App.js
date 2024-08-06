@@ -1,19 +1,32 @@
-// src/App.js
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Box } from '@mui/material';
-import Sidebar from './components/Sidebar';
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { CssBaseline, Box, Toolbar } from '@mui/material';
 import Navbar from './components/Navbar';
-import Dashboard from './pages/dashboard';
-import Profile from './pages/profile';
+import Sidebar from './components/Sidebar';
+import Dashboard from './pages/Dashboard';
+import Profile from './pages/Profile';
+
+const drawerWidth = 240;
 
 const App = () => {
+    const [open, setOpen] = useState(true);
+
     return (
         <Router>
             <Box sx={{ display: 'flex' }}>
-                <Sidebar />
-                <Box sx={{ flexGrow: 1 }}>
-                    <Navbar />
+                <CssBaseline />
+                <Navbar />
+                <Sidebar open={open} setOpen={setOpen} />
+                <Box
+                    component="main"
+                    sx={{
+                        flexGrow: 1,
+                        p: 3,
+                        marginLeft: { sm: open ? `${drawerWidth}px` : '60px' }, // Adjust margin based on sidebar state
+                        transition: 'margin 0.3s' // Smooth transition
+                    }}
+                >
+                    <Toolbar />
                     <Routes>
                         <Route path="/dashboard" element={<Dashboard />} />
                         <Route path="/profile" element={<Profile />} />
