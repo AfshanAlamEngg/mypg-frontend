@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { CssBaseline, Box, Toolbar } from '@mui/material';
 import Navbar from './components/Navbar';
 import Sidebar from './components/Sidebar';
-// import Dashboard from './pages/Dashboard';
+import Settings from './components/Settings'; // import Dashboard from './pages/Dashboard';
 import Dashboard from './pages/Dashboard/Dashboard';
 import Profile from './pages/Profile';
 import Landlord from './pages/Landlord'; // Import the new Landlord page
@@ -33,6 +33,7 @@ const App = () => {
                         <Route path="/dashboard" element={<Dashboard />} />
                         <Route path="/profile" element={<Profile />} />
                         <Route path="/landlord" element={<Landlord />} /> {/* Add new route */}
+                        <Route path="/settings" element={<Settings />} />
                     </Routes>
                 </Box>
             </Box>
