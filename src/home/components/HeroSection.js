@@ -5,24 +5,25 @@ const HeroSection = () => {
   return (
     <Box
       sx={{
-        backgroundImage: 'url(/path/to/image.jpg)',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        color: 'white',
+        backgroundColor: '#004d40', // A deep teal color for a professional look
+        color: '#ffffff', // White text for good contrast
         padding: '100px 0',
         textAlign: 'center'
       }}
     >
       <Container>
         <Typography variant="h2" gutterBottom>
-          Find Your Perfect PG Accommodation
+          My PG
         </Typography>
+        {/* <Typography variant="h3" gutterBottom>
+          Find Your Perfect PG Accommodation
+        </Typography> */}
         <Typography variant="h5" paragraph>
           Your comfort is our priority. Discover the best PGs around you.
         </Typography>
-        <Button variant="contained" size="large" color="primary">
+        {/* <Button variant="contained" color="primary" size="large">
           Get Started
-        </Button>
+        </Button> */}
       </Container>
     </Box>
   );
