@@ -1,6 +1,6 @@
-# My PG - A Paying Management System - React Frontend
+# My PG - A Paying Guest Management System - React Frontend
 
-Welcome to the PG Management System Frontend! This project is the React-based frontend for the PG Management System, providing a user-friendly interface for landlords and tenants to manage and book paying guest accommodations.
+Welcome to the My PG Project! This project is the React-based frontend for the PG Management System, providing a user-friendly interface for landlords and tenants to manage and book paying guest accommodations.
 
 ## Table of Contents
 - [Features](#features)
