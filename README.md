@@ -1,4 +1,4 @@
-# PG Management System - React Frontend
+# My PG - A Paying Management System - React Frontend
 
 Welcome to the PG Management System Frontend! This project is the React-based frontend for the PG Management System, providing a user-friendly interface for landlords and tenants to manage and book paying guest accommodations.
 
@@ -82,5 +82,5 @@ This project is licensed under the MIT License. See the `LICENSE` file for more 
 
 ## Contact
 
-For any inquiries or support, please contact afshanalamengg@gmail.com.
+For any inquiries or support, please contact afshanalamengg@gmail.com
 
