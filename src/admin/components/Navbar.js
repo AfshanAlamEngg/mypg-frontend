@@ -6,7 +6,7 @@ import { Notifications as NotificationsIcon, AccountCircle as AccountCircleIcon 
 const Navbar = () => {
     const [anchorEl, setAnchorEl] = useState(null);
     const [notificationAnchorEl, setNotificationAnchorEl] = useState(null);
-    const [notifications, setNotifications] = useState(3); // Example notification count
+    const [notifications] = useState(3); // Example notification count
     const [logoutOpen, setLogoutOpen] = useState(false); // State for logout confirmation modal
     const navigate = useNavigate(); // Initialize useNavigate
 

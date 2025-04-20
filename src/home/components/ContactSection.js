@@ -86,14 +86,14 @@ const ContactSection = () => {
               boxShadow: '0px 4px 12px rgba(0, 0, 0, 0.1)',
             }}
           >
-            <iframe
+            {/* <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.918108354807!2d-122.41941868468178!3d37.77492927975834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808f7d8b8b7d%3A0x9cabe08a63d20b!2sSan%20Francisco%2C%20CA%2094111%2C%20USA!5e0!3m2!1sen!2sin!4v1634851034720!5m2!1sen!2sin"
               width="100%"
               height="100%"
               style={{ border: 0 }}
               allowFullScreen=""
               loading="lazy"
-            />
+            /> */}
           </Box>
         </Grid>
       </Grid>
